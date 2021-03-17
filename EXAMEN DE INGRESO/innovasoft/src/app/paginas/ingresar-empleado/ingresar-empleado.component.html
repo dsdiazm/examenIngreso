@@ -1,0 +1,128 @@
+
+<div class="col-md-12 mx-auto mt-5">
+  <form >
+      <h3 class="text-center">Datos del empleado</h3>
+      <hr>
+      <div class="form-row">
+        <div class="form-group col-md-5">
+          <label for="name">Nombre Completo</label>
+          <input name="name" type="text" [(ngModel)]="empleado.name"  class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="tipoDocumento">Tipo de documento de identidad</label>
+          <select name="tipoDocumento" type="text" [(ngModel)]="empleado.tipoDocumento" class="form-control">
+            <option value="">SELECCIONE UNA OPCION</option>
+            <option value="Cedula de ciudadania">Cedula de ciudadania</option>
+            <option value="Cedula de extranjeria">Cedula de extranjeria</option>
+            <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="numberDocument">Numero de identidad</label>
+          <input name="numberDocument" [(ngModel)]="empleado.numberDocument" type="number" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="fechaNacimiento">Fecha de nacimiento</label>
+          <input name="fechaNacimiento" type="date" [(ngModel)]="empleado.fechaNacimiento" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-5">
+          <label for="direccion">Direccion de residencia</label>
+          <input name="direccion" type="text" [(ngModel)]="empleado.direccion" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="barrio">Barrio</label>
+          <input name="barrio" type="text" [(ngModel)]="empleado.barrio" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="ciudad">Ciudad</label>
+          <input name="ciudad" type="text" [(ngModel)]="empleado.ciudad" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="estadoCivil">Estado Civil</label>
+          <select name="estadoCivil" [(ngModel)]="empleado.estadoCivil" class="form-control">
+            <option value="">SELECCIONE UNA OPCION</option>
+            <option value="Soltero">Soltero</option>
+            <option value="Union Libre">Union Libre</option>
+            <option value="Casado(a)">Casado(a)</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="numberCelular">Numero Celular</label>
+          <input name="numberCelular" type="number" [(ngModel)]="empleado.numberCelular" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="numeroFijo">Numero Fijo</label>
+          <input name="numeroFijo" type="number" [(ngModel)]="empleado.numeroFijo" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="correo">Correo Electronico</label>
+          <input name="correo" type="email" [(ngModel)]="empleado.correo" class="form-control"/>
+        </div>
+      </div>
+
+      <h3 class="text-center">Datos Laborales</h3>
+
+      <div class="form-row ">
+        <div class="form-group col-md-3">
+          <label for="cargo">Cargo</label>
+          <select name="cargo" type="text" [(ngModel)]="empleado.roleId" class="form-control">
+            <option value="Director Administrativo">Director Administrativo</option>
+            <option value="Coordinador">Coordinador</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Control Operativo">Control Operativo</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="roleDescripcion">Area de trabajo</label>
+          <select name="roleDescripcion" type="text" [(ngModel)]="empleado.roleDescripcion" class="form-control">
+             <option value="Auditoria">Auditoria</option>
+             <option value="Testing">Testing</option>
+             <option value="Back end">Back end</option>
+             <option value="Front end">Front end</option>
+         </select>
+       </div>
+
+        <div class="form-group col-md-2">
+           <label for="TipoContrato">Tipo de contrato</label>
+           <select name="TipoContrato" type="text" [(ngModel)]="empleado.contractTypeName" class="form-control">
+              <option value="Contrato horas">Contrato por horas</option>
+              <option value="Contrato mes">Contrato por mes</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="fechaIngreso">Fecha de ingreso</label>
+          <input name="fechaIngreso" type="date" [(ngModel)]="empleado.fechaIngreso" class="form-control"/>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="estado">Estado</label>
+          <select name="estado" type="text" [(ngModel)]="empleado.estado" class="form-control">
+            <option value="">SELECCIONE UNA OPCION</option>
+            <option value="Activo">Activo</option>
+            <option value="Vacaciones">Vacaciones</option>
+            <option value="Inactivo">Inactivo</option>
+         </select>
+       </div>
+
+
+
+      </div>
+
+    <button type="submit" class="btn btn-primary btn-lg btn-block" (click)=" saveNewEmpleado()">Registrar empleado</button>
+
+   </form>
+</div>
+
+

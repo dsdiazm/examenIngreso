@@ -1,0 +1,121 @@
+<div class="col-md-12 mx-auto mt-5">
+  <div class="container1">
+      <h3 class="text-center">Ingresar novedad</h3>
+      <h5 class="text-center"><strong>Identificacion del empleado</strong></h5>
+      <hr>
+      <div class="form-row text-center">
+        <div class="form-group col-md-6">
+          <label for="numberDocument">Numero de identidad</label >
+          <input name="numberDocument" [(ngModel)]="empleado.numberDocument" type="number" class="form-control" disabled/>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="contractTypeName">Tipo de contrato</label>
+          <select name="contractTypeName" [(ngModel)]="empleado.contractTypeName" class="form-control">
+            <option value="">SELECCIONE UNA OPCION</option>
+            <option value="Contrato horas">Contrato por horas</option>
+             <option value="Contrato mes">Contrato por mes</option>
+         </select>
+        </div>
+      </div>
+
+      <h5 class="text-center"><strong>Datos Laborales</strong></h5>
+
+      <div class="form-row text-center">
+        <div class="form-group col-md-4">
+          <label for="name">Nombre Completo</label>
+          <input name="name" type="text" [(ngModel)]="empleado.name"  class="form-control" disabled/>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="roleId">Cargo</label>
+          <input name="roleId" type="text" [(ngModel)]="empleado.roleId" class="form-control" disabled>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="roleDescripcion">Area de trabajo</label>
+          <input name="roleDescripcion" type="text" [(ngModel)]="empleado.roleDescripcion" class="form-control" disabled>
+       </div>
+
+        <div class="form-group col-md-3">
+          <label for="estadoEmpleado">Estado</label>
+          <input name="estado" type="text" [(ngModel)]="empleado.estado" class="form-control" disabled>
+        </div>
+      </div>
+
+
+    <h5 class="text-center"><strong>Liquidacion nomina por horas </strong></h5>
+      <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="hourlySalary">Numero de horas</label>
+            <input name="hourlySalary" [(ngModel)]="empleado.hourlySalary" placeholder="Ingresa el numero de horas trabajadas" class="form-control">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="iniTrabajo">Fecha de inicio</label>
+            <input type="date" name="iniTrabajo" [(ngModel)]="empleado.iniTrabajo" class="form-control">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="finTrabajo">Fecha de finalizacion</label>
+            <input type="date" name="finTrabajo" [(ngModel)]="empleado.finTrabajo"  class="form-control">
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="tipoBono">Bono</label>
+            <select name="tipoBono" [(ngModel)]="empleado.tipoBono" class="form-control" >
+              <option value="">SELECCIONE UNA OPCION</option>
+              <option value="Bono por cumplimiento">Bono por cumplimiento</option>
+              <option value="Bono por comision">Bono por comision</option>
+              <option value="Bono de navidad">Bono de navidad</option>
+              <option value="Bono vacacional">Bono vacacional</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="valorBono">Valor del bono</label>
+            <input type="number" name="valorBono"  [(ngModel)]="empleado.valorBono" class="form-control" >
+          </div>
+      </div>
+
+
+
+    <h5 class="text-center"><strong>Liquidacion nomina por dias (mes) </strong></h5>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="monthlySalary">Numero de dias</label>
+            <input type="number" name="monthlySalary" [(ngModel)]="empleado.monthlySalary" placeholder="Ingresa el numero de horas trabajadas" class="form-control">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="iniTrabajo">Fecha de inicio</label>
+            <input type="date" name="iniTrabajo" [(ngModel)]="empleado.iniTrabajo" class="form-control">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="finTrabajo">Fecha de finalizacion</label>
+            <input type="date" id="finTrabajo" [(ngModel)]="empleado.finTrabajo" class="form-control">
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="tipoBono">Bono</label>
+            <select name="tipoBono" [(ngModel)]="empleado.tipoBono" class="form-control">
+              <option value="">SELECCIONE UNA OPCION</option>
+              <option value="Bono por cumplimiento">Bono por cumplimiento</option>
+              <option value="Bono por comision">Bono por comision</option>
+              <option value="Bono de navidad">Bono de navidad</option>
+              <option value="Bono vacacional">Bono vacacional</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="valorBono">Valor del bono</label>
+            <input type="number" name="valorBono" [(ngModel)]="empleado.valorBono"  class="form-control" >
+          </div>
+        </div>
+
+      </div>
+
+  <button type="submit" class="btn btn-primary btn-lg btn-block"(click)="updateEmpleado()">Liquidar nomina</button>
+
+</div>

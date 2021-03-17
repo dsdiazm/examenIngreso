@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="text-center">Hoja de registro</h3>
+                <h2 class="text-center"><strong>Innoware</strong></h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+                  <div class="form-group">
+                    <label for="Text">Nombre Completo</label>
+                    <input type="email" class="form-control" formControlName="name"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Text">Cargo</label>
+                    <select name="cargo" class="form-control" id="cargo" formControlName='cargo'>
+                      <option value="Director Administrativo">Director Administrativo</option>
+                      <option value="Coordinador">Coordinador</option>
+                      <option value="Supervisor">Supervisor</option>
+                      <option value="Control Operativo">Control Operativo</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="email">Email</label>
+                     <input type="email" class="form-control" formControlName="email"/>
+                  </div>
+
+                  <div class="form-group">
+                        <label for="Password">Clave de seguridad</label>
+                        <input type="password" class="form-control" formControlName="password"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Password2">Confirme su clave de seguridad</label>
+                    <input type="password" class="form-control" formControlName="password2"/>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+
+                </form>
+
+                <div class="form-group mt-3">
+                    <p>Tienes una cuenta Innoware?<a href="/login"> Inicia sesion</a></p>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+

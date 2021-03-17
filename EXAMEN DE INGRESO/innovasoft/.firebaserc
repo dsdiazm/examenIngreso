@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "innovasoft-e0b50": {
+      "hosting": {
+        "innovasoft": [
+          "innovasoft-e0b50"
+        ]
+      }
+    }
+  }
+}
